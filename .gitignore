@@ -1,3 +1,4 @@
 # Ignorar node_modules en todas partes
 **/node_modules/
 .env
+neo4j/data/

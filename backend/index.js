@@ -15,7 +15,7 @@ const port = 4000;
 app.get('/', async (req, res) => {
   const session = driver.session();
   try {
-    const result = await session.run('RETURN "Hola desde Neo4j" AS mensaje');
+    const result = await session.run('RETURN "Hola desde Neo4j 2" AS mensaje');
     res.send(result.records[0].get('mensaje'));
   } finally {
     await session.close();
