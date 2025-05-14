@@ -10,10 +10,10 @@ import re
 load_dotenv()
 
 # Variables de entorno para la conexión a Neo4j y TMDb
-NEO4J_URI = os.getenv("NEO4J_URI")
-NEO4J_USER = os.getenv("NEO4J_USER")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+NEO4J_URI = "bolt://localhost:7687"
+NEO4J_USER = "neo4j"
+NEO4J_PASSWORD = "neo4jpassword"
+TMDB_API_KEY = "0dfd4515470309f171ce15c00d761536"
 BASE_URL = "https://api.themoviedb.org/3"
 GENRES_URL = f"{BASE_URL}/genre/movie/list?api_key={TMDB_API_KEY}&language=en-US"
 
