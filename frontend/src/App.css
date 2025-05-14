@@ -1,0 +1,132 @@
+/* Elimina cualquier margen/padding por defecto del navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* Contenedor general de la app */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar fija arriba con Rekko centrado */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+/* Solo el texto "Rekko" tiene cursor pointer */
+.navbar-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Pantalla de inicio */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+
+.input {
+  padding: 20px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.recomendaciones {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+.recomendacion {
+  width: 25%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 40px;
+}
+
+/* Botón para generar nueva recomendación */
+.recomendacion button {
+  margin-top: 15px;
+  padding: 15px 30px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recomendacion button:hover {
+  background-color: #535353;
+}
+
+.spinner-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.recomendacion-title{
+  padding-bottom: 15px;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.recomendacion-poster{
+  border-radius: 10px;
+  max-width: 300px;
+}
